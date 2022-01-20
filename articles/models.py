@@ -9,6 +9,10 @@ class Category(models.Model):
     def __str__(self):
         return self.category
 
+    class Meta:
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorias'
+
 
 class Articles(models.Model):
     title = models.CharField(max_length=255)
