@@ -7,15 +7,8 @@ from articles.serializer import CategorySerializer, ArticleSerializer
 
 class ListArticle(APIView):
     """
-    View para listar todos os artigos publicados
-
-    * Requer autenticação de token.
-    * Somente usuários autenticados podem acessar esta visualização.
+    Lista todos os artigos publicados
     """
-
-    permission_classes = [
-        permissions.IsAuthenticated
-    ]
 
     def get(self, request, format=None):
         """
