@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     # APPS
     'articles',
     'authors',
+
+    # EXTERNAL APPS
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
