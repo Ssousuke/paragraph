@@ -6,13 +6,20 @@ from articles.serializer import CategorySerializer, ArticleSerializer
 
 class ListArticle(APIView):
     """
-    Lista todos os artigos publicados
+    API View de Artigos
     """
 
-    def get(self, request, format=None):
+    def get_queryset(self):
         """
-        Retorna a lista de todos os artigos publicados
+        Busca todos os artigos publicados
         """
         list_articles = Articles.objects.filter(publish=True)
+        return list_articles
+
+    def get(self, request, *args, **kwargs):
+        """
+        Retorna todos os artigos publicados
+        """
+        list_articles = self.get_queryset()
         serializer = ArticleSerializer(list_articles, many=True)
         return Response(serializer.data)
