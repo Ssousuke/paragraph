@@ -1,5 +1,4 @@
 from rest_framework.views import APIView
-from rest_framework import authentication, permissions
 from articles.models import Articles
 from rest_framework.response import Response
 from articles.serializer import CategorySerializer, ArticleSerializer
