@@ -8,7 +8,7 @@ class AuthorSerializer(serializers.ModelSerializer):
         fields = (
             'profile',
             'name',
+            'user_name',
             'bio',
             'status',
-            'user_name',
         )
