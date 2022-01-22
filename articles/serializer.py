@@ -19,5 +19,7 @@ class ArticleSerializer(serializers.ModelSerializer):
             'article',
             'category',
             'publish',
+            'created_at',
+            'updated_at',
             'author',
         )
